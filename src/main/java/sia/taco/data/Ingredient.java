@@ -1,4 +1,21 @@
 package sia.taco.data;
 
-public record Ingredient(String id, String name, Type type) {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@Entity
+@NoArgsConstructor
+public final class Ingredient {
+
+    @Id
+    private String id;
+    private String name;
+    private Type type;
+
+
 }
