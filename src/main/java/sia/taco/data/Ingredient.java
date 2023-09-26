@@ -1,18 +1,18 @@
 package sia.taco.data;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 @Data
-@AllArgsConstructor
-@Entity
 @NoArgsConstructor
+@Table("ingredients")
+@AllArgsConstructor
 public final class Ingredient {
 
-    @Id
+    @PrimaryKey
     private String id;
     private String name;
     private Type type;
